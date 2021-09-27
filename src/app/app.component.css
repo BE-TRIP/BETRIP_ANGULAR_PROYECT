@@ -1,0 +1,16 @@
+
+.div-login-general {
+    background: rgb(255, 255, 255);
+    height: 150px;
+
+    display: flex;
+    justify-content: center;
+   
+  } 
+  
+  .div-login-center {
+      margin-top: 150px;
+        width: 400px;
+        align-items: center;
+  }
+  

@@ -1,0 +1,28 @@
+.div-register1{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   
+  } 
+  
+  .div-register2 {
+     
+        width:400px;
+        align-items: center;
+  }
+.headercardregister{
+ align-items: center;
+ margin-left: 80px;
+}
+.matconten{
+  width: 100%;
+}
+.actionsregister{
+  align-items: center;
+ margin-left: 100px;
+}
+
+.formregister{
+  width: 380px;
+}

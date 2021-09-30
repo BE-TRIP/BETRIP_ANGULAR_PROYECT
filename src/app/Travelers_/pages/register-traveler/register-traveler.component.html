@@ -1,4 +1,61 @@
-<p>register-traveler works!</p>
-<div>
-    asssssssssssssssssss
+<div class="div-register1">
+    <div class="div-register2">
+        <mat-card  class="cardes" style="text-align: center;">
+            <mat-card-header class="headercardregister">
+                <mat-card-title>
+                    <mat-icon>person</mat-icon>
+                    Register Form
+                </mat-card-title>
+                <mat-card-subtitle>
+                    Please fill your information
+                </mat-card-subtitle>
+            </mat-card-header> 
+            
+                <mat-card-content id="matconten">
+                    <table class="formregister">
+                        <tr>
+                            <mat-form-field >
+                                <input matInput placeholder="Nombre" name="name" required >
+                
+                            </mat-form-field>
+                        </tr>
+                        <tr>
+                            <mat-form-field>
+                                <input matInput type="number" placeholder="Age" name="age" required >
+                            </mat-form-field>
+                        </tr>
+                        <tr>
+                            <mat-form-field>
+                                <input matInput  placeholder="DNI" name="DNI" required >
+                            </mat-form-field>
+                        </tr>
+                        <tr>
+                            <mat-form-field>
+                                <input matInput type="email" placeholder="Email" name="email" required >
+                            </mat-form-field>
+                        </tr>
+                        <tr>
+                            <mat-form-field>
+                                <input matInput placeholder="Telefono" name="telefeono" required >
+                            </mat-form-field>
+                        </tr>
+                    </table>
+                   
+                    
+                </mat-card-content>
+                <mat-card-actions class="actionsregister">   
+                    <table>
+                        <tr>
+                            <td>
+                                <button mat-raised-button color="warn" [routerLink]="'/login'">Cancel</button>          
+                            </td>
+                            <td>
+                                <button mat-raised-button color="primary" [routerLink]="'/tripEvent'">Register</button>          
+                            </td>
+                        </tr>
+                    </table>     
+                   
+            </mat-card-actions>
+        </mat-card>
+    </div>
 </div>

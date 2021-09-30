@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { TravelersComponent } from './Travelers_/pages/travelers/travelers.component';
+
 import { HttpClientModule } from '@angular/common/http';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -15,11 +15,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import {MatSortModule}from '@angular/material/sort';
-import {MatCardModule}from '@angular/material/card'
+import {MatCardModule}from '@angular/material/card';
+import { RegisterTravelerComponent } from './Travelers_/pages/register-traveler/register-traveler.component';
+import { TripEventsComponent } from './Travelers_/pages/trip-events/trip-events.component';
+import { LoginComponent } from './public/login/login.component'
 @NgModule({
   declarations: [
     AppComponent,
-    TravelersComponent
+    RegisterTravelerComponent,
+    TripEventsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

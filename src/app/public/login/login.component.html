@@ -1,0 +1,30 @@
+<div class="div-login-general">
+    <div class="div-login-center">
+      <mat-card>
+        <mat-card-title>LOGIN</mat-card-title>
+        <mat-card-subtitle>BeTrip</mat-card-subtitle>
+        <mat-card-content>
+          <form class="example-form">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <input type="text" placeholder="Correo"
+              aria-label="Email"
+              matInput>
+            </mat-form-field>
+          </form>       
+          <form class="example-form">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <input type="text" placeholder="Contraseña"
+              aria-label="Password"
+              matInput >
+            </mat-form-field>
+          </form>      
+        </mat-card-content>
+        <mat-card-actions>        
+                <button mat-raised-button color="primary" [routerLink]="'/travelerRegister'">Login</button>          
+        </mat-card-actions>
+        <mat-card-footer>
+          Registrarse
+        </mat-card-footer>
+      </mat-card>
+    </div>
+  </div>

@@ -10,34 +10,61 @@
                     Please fill your information
                 </mat-card-subtitle>
             </mat-card-header> 
-            
+            <form [formGroup]="registerForm" (submit)="submitForm()">
                 <mat-card-content id="matconten">
                     <table class="formregister">
                         <tr>
-                            <mat-form-field >
-                                <input matInput placeholder="Nombre" name="name" required >
-                
+                            <mat-form-field appereance="fill" class="full-width" >
+                               
+                                <input type="text" matInput formControlName="name" placeholder="Nombre">
+                                <mat-error *ngIf="name?.errors?.required">
+                                    Full name is <strong>required</strong>
+                                </mat-error>
+                            </mat-form-field>
+                            
+                        </tr>
+                        <tr>
+                            <mat-form-field>
+                                <input type="number" matInput formControlName="age" placeholder="Age"  >
                             </mat-form-field>
                         </tr>
                         <tr>
                             <mat-form-field>
-                                <input matInput type="number" placeholder="Age" name="age" required >
+                                <input  type="text" matInput formControlName="dni" placeholder="DNI">
+                            </mat-form-field>
+                            <mat-error *ngIf="dni?.errors?.required">
+                                DNI must have only<strong>numbers</strong>
+                            </mat-error>
+                        </tr>
+                        <tr>
+                            <mat-form-field>
+                                <input matInput type="email" matInput formControlName="email"  type="email" placeholder="Email" >
+                            </mat-form-field>
+                            <mat-error *ngIf="email?.errors?.required">
+                                Email is <strong>required</strong>
+                            </mat-error>
+                            <mat-error *ngIf="email?.errors?.email && !email?.errors?.required">
+                                Please enter a valid email address
+                            </mat-error>
+                        </tr>
+                        <tr>
+                            <mat-form-field>
+                                <input matInput type="password" placeholder="Password" formControlName="password" >
+                                <mat-error *ngIf="password?.errors?.required">
+                                    Password  is <strong>required</strong>
+                                </mat-error>
+                                <mat-error *ngIf="password?.errors?.minLenght && !password?.errors?.required">
+                                    Password must be at least <strong>5</strong> characters
+                                </mat-error>
                             </mat-form-field>
                         </tr>
                         <tr>
                             <mat-form-field>
-                                <input matInput  placeholder="DNI" name="DNI" required >
+                                <input matInput placeholder="Telefono" formControlName="phone" >
                             </mat-form-field>
-                        </tr>
-                        <tr>
-                            <mat-form-field>
-                                <input matInput type="email" placeholder="Email" name="email" required >
-                            </mat-form-field>
-                        </tr>
-                        <tr>
-                            <mat-form-field>
-                                <input matInput placeholder="Telefono" name="telefeono" required >
-                            </mat-form-field>
+                            <mat-error *ngIf="phone?.errors?.pattern && !phone?.errors?.required">
+                                Phone must have only<strong>numbers</strong>
+                            </mat-error>
                         </tr>
                     </table>
                    
@@ -47,15 +74,16 @@
                     <table>
                         <tr>
                             <td>
-                                <button mat-raised-button color="warn" [routerLink]="'/login'">Cancel</button>          
+                                <button mat-raised-button color="warn" [routerLink]="'/login'" (click)="saidSomething();">Cancel</button>          
                             </td>
                             <td>
-                                <button mat-raised-button color="primary" [routerLink]="'/tripEvent'">Register</button>          
+                                <button [disabled]="!registerForm.valid" mat-raised-button color="primary" [routerLink]="'/tripEvent'">Register</button>          
                             </td>
                         </tr>
                     </table>     
                    
             </mat-card-actions>
+            </form>
         </mat-card>
     </div>
 </div>

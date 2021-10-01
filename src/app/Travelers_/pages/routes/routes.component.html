@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+    <h1>BetriProyect</h1>
+    <div>----></div>
+    <h2>A good app</h2>
+    <div class="mat-spacer"></div>
+    <a mat-button >Home</a>
+    <a mat-button >students</a>
+    <a mat-button >about</a>
+  </mat-toolbar>
+  <div>
+    <div>
+        <google-map width="100%" height="600" [center]="position">
+            <map-marker [position]="position" [label]="label"></map-marker>
+        </google-map>
+    </div>
+  </div>

@@ -24,7 +24,8 @@ import { KnowMoreComponent } from './Travelers_/pages/know-more/know-more.compon
 import { CreateEventComponent } from './Travelers_/pages/create-event/create-event.component';
 import { SearchEventComponent } from './Travelers_/pages/search-event/search-event.component';
 import { SearchRouteComponent } from './Travelers_/pages/search-route/search-route.component';
-
+import { RoutesComponent } from './Travelers_/pages/routes/routes.component';
+import { GoogleMapsModule } from '@angular/google-maps';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,8 @@ import { SearchRouteComponent } from './Travelers_/pages/search-route/search-rou
     KnowMoreComponent,
     CreateEventComponent,
     SearchEventComponent,
-    SearchRouteComponent
+    SearchRouteComponent,
+    RoutesComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,7 +55,8 @@ import { SearchRouteComponent } from './Travelers_/pages/search-route/search-rou
     MatIconModule,
     MatSortModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    GoogleMapsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

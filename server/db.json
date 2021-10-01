@@ -1,3 +1,22 @@
 {
-    
+  "travelers": [
+    {
+      "id": 0,
+      "name": "string",
+      "age": 12,
+      "dni": 0,
+      "email": "string",
+      "password": "string",
+      "phoneNumber": "string"
+    },
+    {
+      "name": "GAEE",
+      "age": 12,
+      "dni": "82904012",
+      "email": "qwoidqoh@as",
+      "password": "121212112",
+      "phoneNumber": "0991144192",
+      "id": 1
+    }
+  ]
 }

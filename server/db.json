@@ -1,21 +1,128 @@
 {
-  "travelers": [
-    {
-      "id": 0,
-      "name": "string",
-      "age": 12,
-      "dni": 0,
-      "email": "string",
-      "password": "string",
-      "phoneNumber": "string"
-    },
-    {
-      "name": "GAEE",
-      "age": 12,
-      "dni": "82904012",
-      "email": "qwoidqoh@as",
-      "password": "121212112",
-      "phoneNumber": "0991144192",
-      "id": 1
-    }
-  ]
+    
+        "travelers": [
+          {
+            "id": 0,
+            "name": "string",
+            "age": 12,
+            "dni": 0,
+            "email": "string",
+            "password": "string",
+            "phoneNumber": "string"
+          },
+          {
+            "name": "GAEE",
+            "age": 12,
+            "dni": "82904012",
+            "email": "qwoidqoh@as",
+            "password": "121212112",
+            "phoneNumber": "0991144192",
+            "id": 1
+          }
+        ],
+   
+   
+   
+    "Eventos": [
+
+        { 
+        "id":1,
+        "driver":1, 
+        "destiny":"Churin", 
+        "destinyUrl":"/assets/Images/IChurin.png", 
+        "seating":2,
+        "starting_point":"La Molina", 
+        "departure_time":"4:00 pm", 
+        "departure_date":"27/12/2021",
+        "cost":90,
+        "type":"Camioneta",
+        "plate":"WRX80",
+        "driverUrl":"/assets/Images/conductor_1.png"
+
+        },
+
+        { 
+        "id": 2,
+        "driver": 2, 
+        "destiny": "Huacachina", 
+        "destinyUrl": "/assets/Images/IHuacachina.png", 
+        "seating": 4,
+        "starting_point": "San Vicente", 
+        "departure_time": "10:00 am", 
+        "departure_date": "01/01/2022",
+        "cost": 120,
+        "type": "Furgoneta",
+        "plate": "XYP9X",
+        "driverUrl": "/assets/Images/conductor_2.jpg"
+
+        
+        },
+        { 
+        "id": 3,
+        "driver": 3, 
+        "destino": "Matucana", 
+        "destinyUrl": "/assets/Images/IMatucana.png", 
+        "seating": 3,
+        "starting_point": "Ancón", 
+        "departure_time": "12:00 pm", 
+        "departure_date": "20/11/2021",
+        "cost": 70,
+        "type": "Minivan",
+        "plate": "T0D3S",
+        "driverUrl": "/assets/Images/conductor_3.jpg"
+
+        },
+        { 
+        "id": 4,
+        "driver": 4, 
+        "destiny": "Nazca", 
+        "destinyUrl": "/assets/Images/INazca.png", 
+        "seating": 4,
+        "starting_point": "San Isidro", 
+        "departure_time": "10:00 am", 
+        "departure_date": "10/02/2022",
+        "cost": 90,
+        "type": "Minivan",
+        "plate": "SD20D",
+        "driverUrl": "/assets/Images/conductor_4.jpg"
+
+        },
+        { 
+        "id": 5,
+        "driver": 5, 
+        "destiny": "Real Felipe", 
+        "destinyUrl": "/assets/Images/IRealFelipe.png", 
+        "seating": 2,
+        "starting_point": "Churin", 
+        "departure_time": "4:00 pm", 
+        "departure_date": "27/12/2021",
+        "cost": 200,
+        "type": "Campervam",
+        "plate": "S1M0N",
+        "driverUrl": "/assets/Images/conductor_5.png"
+
+        }
+
+
+    ],
+   
+  
+    "conductores": [
+        {"id":1,"nombre":"Marlon Delgado","edad":20,"Pfp":"/assets/Images/conductor_1.png" },
+        {"id":2,"nombre":"Kevin Olarte","edad":40,"Pfp":"/assets/Images/conductor_2.jpg" },
+        {"id":3,"nombre":"Carlos Morote","edad":30,"Pfp":"/assets/Images/conductor_3.jpg" },
+        {"id":4,"nombre":"Edwin Samaniego","edad":25,"Pfp":"/assets/Images/conductor_4.jpg" },
+        {"id":5,"nombre":"Mariano Guzmán","edad":51,"Pfp":"/assets/Images/conductor_5.jpg" }
+   
+    ]
+
+
+
+
+
+
+}
+    
+
+
+

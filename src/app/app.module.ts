@@ -26,6 +26,8 @@ import { SearchEventComponent } from './Travelers_/pages/search-event/search-eve
 import { SearchRouteComponent } from './Travelers_/pages/search-route/search-route.component';
 import { RoutesComponent } from './Travelers_/pages/routes/routes.component';
 import { GoogleMapsModule } from '@angular/google-maps';
+import {MatListModule} from '@angular/material/list';
+import { FilterPipe } from './pipes/filter.pipe'
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +39,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
     SearchEventComponent,
     SearchRouteComponent,
     RoutesComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
@@ -56,7 +59,8 @@ import { GoogleMapsModule } from '@angular/google-maps';
     MatSortModule,
     MatCardModule,
     MatGridListModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

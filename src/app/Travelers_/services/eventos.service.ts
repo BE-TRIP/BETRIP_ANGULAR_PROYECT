@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import{HttpClient,HttpErrorResponse,HttpHeaders} from '@angular/common/http'
 import { Observable,throwError } from 'rxjs';
-import { Traveler } from '../model/traveler';
+import { Eventos } from '../model/eventos';
 import	{catchError,retry}from 'rxjs/operators'
 @Injectable({
   providedIn: 'root'
 })
-export class TravelersService {
+export class EventosService {
 
-  
-  basePath='http://localhost:3000/api/v1/travelers'
+  //basePath='http://localhost:3000/api/v1/Eventos'
+  basePath='http://localhost:3000/Eventos'
 
   httpOptions={
     headers:new HttpHeaders({
@@ -30,28 +30,29 @@ export class TravelersService {
   }
 
 
-  create(item:any):Observable<Traveler>{
-    return this.http.post<Traveler>(this.basePath,JSON.stringify(item),this.httpOptions)
+  create(item:any):Observable<Eventos>{
+    return this.http.post<Eventos>(this.basePath,JSON.stringify(item),this.httpOptions)
     .pipe(
       retry(2),
       catchError(this.handleError)
     )
   }
+  
 
-  getById(id:any):Observable<Traveler>{
-    return this.http.get<Traveler>(`${this.basePath}/${id}`,this.httpOptions).pipe(
+  getById(id:any):Observable<Eventos>{
+    return this.http.get<Eventos>(`${this.basePath}/${id}`,this.httpOptions).pipe(
       retry(2),
       catchError(this.handleError)
       );
   }
-  getAll():Observable<Traveler>{
-    return this.http.get<Traveler>(this.basePath,this.httpOptions).pipe(
+  getAll():Observable<Eventos>{
+    return this.http.get<Eventos>(this.basePath,this.httpOptions).pipe(
       retry(2),
       catchError(this.handleError)
       );
   }
-  update(id:any,item:any):Observable<Traveler>{
-    return this.http.put<Traveler>(`${this.basePath}/${id}`,JSON.stringify(item),this.httpOptions)
+  update(id:any,item:any):Observable<Eventos>{
+    return this.http.put<Eventos>(`${this.basePath}/${id}`,JSON.stringify(item),this.httpOptions)
     .pipe(
       retry(2),
       catchError(this.handleError)
@@ -59,7 +60,7 @@ export class TravelersService {
   }
 
   delete(id:any){
-    return this.http.put<Traveler>(`${this.basePath}/${id}`,this.httpOptions)
+    return this.http.put<Eventos>(`${this.basePath}/${id}`,this.httpOptions)
     .pipe(
       retry(2),
       catchError(this.handleError)

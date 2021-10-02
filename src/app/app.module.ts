@@ -7,7 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HttpClientModule } from '@angular/common/http';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatInputModule } from '@angular/material/input';
@@ -24,7 +25,9 @@ import { CreateEventComponent } from './Travelers_/pages/create-event/create-eve
 import { SearchEventComponent } from './Travelers_/pages/search-event/search-event.component';
 import { SearchRouteComponent } from './Travelers_/pages/search-route/search-route.component';
 
-import {MatListModule} from '@angular/material/list'
+import {MatListModule} from '@angular/material/list';
+import { FilterPipe } from './pipes/filter.pipe';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +38,8 @@ import {MatListModule} from '@angular/material/list'
     KnowMoreComponent,
     CreateEventComponent,
     SearchEventComponent,
-    SearchRouteComponent
+    SearchRouteComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

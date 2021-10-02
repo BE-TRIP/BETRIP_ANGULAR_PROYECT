@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {RegisterTravelerComponent}from '../app/Travelers_/pages/register-traveler/register-traveler.component'
 import { LoginComponent } from './public/login/login.component';
 import { TripEventsComponent } from '../app/Travelers_/pages/trip-events/trip-events.component';
-
+import { SearchRouteComponent } from './Travelers_/pages/search-route/search-route.component';
 import { KnowMoreComponent } from './Travelers_/pages/know-more/know-more.component';
 
 const routes: Routes = [
@@ -12,7 +12,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'travelerRegister',component:RegisterTravelerComponent},
   {path:'tripEvent',component:TripEventsComponent},
-
+  {path:'search-route',component:SearchRouteComponent},
   {path:'KnowMore',component:KnowMoreComponent}
 ];
 

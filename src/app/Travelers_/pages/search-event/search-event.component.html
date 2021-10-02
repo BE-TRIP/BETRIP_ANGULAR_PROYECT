@@ -1,1 +1,40 @@
-<p>search-event works!</p>
+<mat-toolbar class="scrollbar">
+    <img src="/assets/Images/imageLogo.jpg">
+    <div></div>
+    <div class="mat-spacer"></div>
+    <div></div>
+    <ul>
+      <li><a mat-button >Inicio</a></li>
+      <li> <a mat-button >Eventos de viaje</a></li>
+      <li><a mat-button >Publicar</a></li>
+  </ul>
+  </mat-toolbar>
+<div class="div-tripEvent1">
+    <div class="div-tripEvent2">
+        
+            <div *ngFor="let element of eventoData" class="cardevents">
+             
+            <mat-card class="example-card" >
+                <mat-card-header>
+                  <img mat-card-avatar src="{{element.driverUrl}}" class="example-header-image">
+              
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title>{{element.destiny}}</mat-card-title>
+                  <mat-card-subtitle></mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image src="{{element.destinyUrl}}" alt="Photo of a Shiba Inu">
+                <mat-card-content><p>Únete a este viaje expectacular, invita a unos amigos, llenemos el auto y ¡Comenzemos el viaje!</p>
+
+                </mat-card-content>
+              
+               
+                <mat-card-actions>
+                  <button mat-button>Mas información</button>
+                </mat-card-actions>
+            </mat-card>
+        
+            </div>
+       
+    </div>
+</div>
+    

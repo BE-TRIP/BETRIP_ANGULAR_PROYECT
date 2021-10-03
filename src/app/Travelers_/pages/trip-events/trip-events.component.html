@@ -4,49 +4,63 @@
   <div class="mat-spacer"></div>
   <div></div>
   <ul>
-    
+    <li><a mat-button [routerLink]="'/searchEvent'" >Inicio</a></li>
     <li><a mat-button [routerLink]="'/routes'" >Buscar Transporte</a></li>
-    <li><a mat-button >Publicar</a></li>
-    <li><a mat-button [routerLink]="'/login'">Inicio</a></li>
+    <li><a mat-button [routerLink]="'/routes'">Publicar</a></li>
 </ul>
 </mat-toolbar>
 
-<div class= "search">
-<mat-form-field class="example-full-width">
-  <span matPrefix> </span>
-  <input type="tel" matInput placeholder="Search" name= "search">
-  <button matSuffix mat-button><mat-icon >search</mat-icon></button>
-  </mat-form-field>
+
+<div class="container">
+  <mat-toolbar>
+     <span>Eventos</span>
+     <span class="spacer"></span>
+     <button mat-stroked-button color="primary" [routerLink]="'/create-Event'">Create event
+      <mat-icon aria-hidden="false" aria-label="add icon" align-center="true">add</mat-icon>
+    </button>      
+
+   </mat-toolbar>
 </div>
+<div class="table-wrapper">  
+  <h1>Eventos disponibles</h1>
+  <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> #Id</th>
+        <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+    </ng-container>
 
+    <ng-container matColumnDef="destiny">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Destination </th>
+        <td mat-cell *matCellDef="let element">{{ element.destiny }}</td>
+    </ng-container>
 
+    <ng-container matColumnDef="starting_point">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Starting Point </th>
+      <td mat-cell *matCellDef="let element">{{ element.starting_point }}</td>
+    </ng-container>
 
-<div class="div-tripEvent1">
-  <div class="div-tripEvent2">
-      
-          <div *ngFor="let element of eventoData" class="cardevents">
-           
-          <mat-card class="example-card" >
-              <mat-card-header>
-                <img mat-card-avatar src="{{element.driverUrl}}" class="example-header-image">
-            
-                <div mat-card-avatar class="example-header-image"></div>
-                <mat-card-title>{{element.destiny}}</mat-card-title>
-                <mat-card-subtitle></mat-card-subtitle>
-              </mat-card-header>
-              <img mat-card-image src="{{element.destinyUrl}}" alt="Photo of a Shiba Inu">
-              <mat-card-content><p>Únete a este viaje expectacular, invita a unos amigos, llenemos el auto y ¡Comenzemos el viaje!</p>
+    <ng-container matColumnDef="departure_date">
+      <th mat-header-cell *matHeaderCellDef> Departure date </th>
+      <td mat-cell *matCellDef="let element">{{ element.departure_date }}</td>
+    </ng-container>
+    <ng-container matColumnDef="cost">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Price </th>
+      <td mat-cell *matCellDef="let element">S/. {{ element.cost }}</td>
+    </ng-container>
 
-              </mat-card-content>
-            
-             
-              <mat-card-actions>
-                <button mat-button  [routerLink]="'/knowMore'">Mas información</button>
-              </mat-card-actions>
-          </mat-card>
-      
-          </div>
-     
-  </div>
+    <ng-container matColumnDef="driver">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Driver </th>
+      <td mat-cell  *matCellDef="let element">{{ element.driver }}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>Options</th>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns" 
+        >
+    </tr>
+  </table>
+  <mat-paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 15]" showFirstLastButtons></mat-paginator>   
 </div>
-  

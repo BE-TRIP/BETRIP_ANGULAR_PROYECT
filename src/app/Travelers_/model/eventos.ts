@@ -1,7 +1,7 @@
 export interface Eventos{
 
     id:number;
-    driver: number; 
+    driver: string; 
     destiny: string;
     destinyUrl:string
     seating: Number,

@@ -1,25 +1,23 @@
-.div-tripEvent1{
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top:50px;
-    background:#264D71;
-    } 
-    
-.div-tripEvent2{
-
-          width:700px;
-          align-items: center;
-          background:#264D71;
-    }
-
-.cardevents{
-    margin-top: 100px;
-    border-color: black;
-    background:#264D71;
+.spacer {
+    flex: 1 1 auto;
 }
 
+.container {
+    margin-top: 25px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.table-wrapper{
+    width: 1024px;
+    margin:50px auto;
+}
+table{
+    width: 100%;
+}
+tr.editable-row{
+    background-color: aquamarine;
+}
 .scrollbar{
     background: #262736;
     height: 50px;

@@ -28,6 +28,7 @@ import { RoutesComponent } from './Travelers_/pages/routes/routes.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import {MatListModule} from '@angular/material/list';
 import { FilterPipe } from './pipes/filter.pipe'
+import { MatOptionModule } from '@angular/material/core';
 @NgModule({
   declarations: [
     AppComponent,
@@ -60,7 +61,8 @@ import { FilterPipe } from './pipes/filter.pipe'
     MatCardModule,
     MatGridListModule,
     GoogleMapsModule,
-    MatListModule
+    MatListModule,
+    MatOptionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

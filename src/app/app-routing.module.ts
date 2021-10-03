@@ -8,6 +8,7 @@ import { KnowMoreComponent } from './Travelers_/pages/know-more/know-more.compon
 import { RoutesComponent } from './Travelers_/pages/routes/routes.component';
 import { SearchEventComponent } from './Travelers_/pages/search-event/search-event.component';
 import { SearchRouteComponent } from './Travelers_/pages/search-route/search-route.component';
+import { CreateEventComponent } from './Travelers_/pages/create-event/create-event.component';
 const routes: Routes = [
   {path:'',redirectTo:'login',pathMatch:'full'},
   {path:'login',component:LoginComponent},
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path:'routes',component:RoutesComponent},
   {path:'knowMore',component:KnowMoreComponent},
   {path:'searchEvent',component:SearchEventComponent},
-  {path:'search-Routes',component:SearchRouteComponent}
+  {path:'search-Routes',component:SearchRouteComponent},
+  {path:'create-Event',component:CreateEventComponent}
 ];
 
 @NgModule({

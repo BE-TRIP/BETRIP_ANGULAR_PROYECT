@@ -1,30 +1,48 @@
-import { Component, OnInit,AfterViewInit,ViewChild } from '@angular/core';
-import { EventosService } from '../../services/eventos.service';
-import { Eventos } from '../../model/eventos';
+import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
+import { TripEventsService } from './trip-events.service';
+import { tripEvent } from './trip-events';
+import { MatTable, MatTableDataSource } from '@angular/material/table';
+import { NgForm } from '@angular/forms';
+import { MatPaginator } from '@angular/material/paginator';
+import * as _ from 'lodash';
+import { MatSort } from '@angular/material/sort';
+import { ThrowStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-trip-events',
   templateUrl: './trip-events.component.html',
   styleUrls: ['./trip-events.component.css']
 })
-export class TripEventsComponent implements OnInit {
-  pruebita:Array<string>=['tuki','owo','hshdshd'];
+export class TripEventsComponent implements OnInit, AfterViewInit  { 
 
-  constructor(private eventosService:EventosService) { }
+  dataSource: MatTableDataSource<any>;
+  displayedColumns: string[] = ['id','driver','destiny', 'starting_point', 'departure_date', 'cost'];
 
+  @ViewChild( MatPaginator, { static:true })
+  paginator!: MatPaginator;
 
-  eventoData:any;
-  ngOnInit(): void {
-    
-    this.getEvents();
-    
+  @ViewChild( MatSort )
+  sort!: MatSort; 
+
+  constructor(private eventService: TripEventsService ) { 
+    this.dataSource= new MatTableDataSource<any>();
+   }
+
+   ngOnInit(): void {
+    this.dataSource.paginator = this.paginator;
+    this.getAllEvent();
   }
- 
-  getEvents(){
-        this.eventosService.getAll().subscribe(data => {
-          this.eventoData = data;
-          console.log(this.eventoData)
-        });      
+
+  ngAfterViewInit(){
+    this.dataSource.sort = this.sort;
   }
+
+  getAllEvent(){
+    this.eventService.getAll().subscribe((response: any)=> {
+      this.dataSource.data = response;
+    });
+  }
+
+  
   
 }

@@ -32,6 +32,9 @@ import { MatOptionModule } from '@angular/material/core';
 import { CreateRouteComponent } from './Drivers/pages/create-route/create-route.component';
 import { TripRoutesComponent } from './Drivers/pages/trip-routes/trip-routes.component';
 import { ShowMyRoutesComponent } from './Drivers/pages/show-my-routes/show-my-routes.component';
+import { LoginDriverComponent } from './Drivers/pages/login-driver/login-driver.component';
+import { RegisterDriverComponent } from './Drivers/pages/register-driver/register-driver.component';
+import { RegisterVehicleComponent } from './Drivers/pages/register-vehicle/register-vehicle.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +49,10 @@ import { ShowMyRoutesComponent } from './Drivers/pages/show-my-routes/show-my-ro
     FilterPipe,
     CreateRouteComponent,
     TripRoutesComponent,
-    ShowMyRoutesComponent
+    ShowMyRoutesComponent,
+    LoginDriverComponent,
+    RegisterDriverComponent,
+    RegisterVehicleComponent
   ],
   imports: [
     BrowserModule,

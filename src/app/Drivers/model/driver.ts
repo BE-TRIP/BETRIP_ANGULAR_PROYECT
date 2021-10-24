@@ -6,7 +6,7 @@ export interface Driver{
     age:number,
     dni:number;
     Pfp:string;
-    username:string;
+    email:string;
     password:string;
     number_seats:number;
     licence_plate:string;

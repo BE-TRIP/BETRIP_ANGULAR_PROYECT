@@ -35,6 +35,7 @@ import { ShowMyRoutesComponent } from './Drivers/pages/show-my-routes/show-my-ro
 import { LoginDriverComponent } from './Drivers/pages/login-driver/login-driver.component';
 import { RegisterDriverComponent } from './Drivers/pages/register-driver/register-driver.component';
 import { RegisterVehicleComponent } from './Drivers/pages/register-vehicle/register-vehicle.component';
+import { LoginTravelerComponent } from './Travelers_/pages/login-traveler/login-traveler.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +53,8 @@ import { RegisterVehicleComponent } from './Drivers/pages/register-vehicle/regis
     ShowMyRoutesComponent,
     LoginDriverComponent,
     RegisterDriverComponent,
-    RegisterVehicleComponent
+    RegisterVehicleComponent,
+    LoginTravelerComponent
   ],
   imports: [
     BrowserModule,

@@ -12,6 +12,10 @@ import { CreateEventComponent } from './Travelers_/pages/create-event/create-eve
 import { CreateRouteComponent } from './Drivers/pages/create-route/create-route.component';
 import { TripRoutesComponent } from './Drivers/pages/trip-routes/trip-routes.component';
 import { ShowMyRoutesComponent } from './Drivers/pages/show-my-routes/show-my-routes.component';
+import {LoginDriverComponent} from './Drivers/pages/login-driver/login-driver.component';
+import {RegisterDriverComponent} from './Drivers/pages/register-driver/register-driver.component'
+import {RegisterVehicleComponent} from './Drivers/pages/register-vehicle/register-vehicle.component'
+import { LoginTravelerComponent } from './Travelers_/pages/login-traveler/login-traveler.component';
 const routes: Routes = [
   {path:'',redirectTo:'login',pathMatch:'full'},
   {path:'login',component:LoginComponent},
@@ -24,7 +28,12 @@ const routes: Routes = [
   {path:'create-Event',component:CreateEventComponent},
   {path:'create-route', component:CreateRouteComponent},
   {path:'tripRoutes', component:TripRoutesComponent},
-  {path:'showMyRoutes', component:ShowMyRoutesComponent}
+  {path:'showMyRoutes', component:ShowMyRoutesComponent},
+  {path:'login-driver',component:LoginDriverComponent},
+  {path:'register-driver',component:RegisterDriverComponent},
+  {path:'register-vehicle',component:RegisterVehicleComponent},
+  {path:'login-traveler',component:LoginTravelerComponent},
+  {path:'register-traveler',component:RegisterTravelerComponent}
 ];
 
 @NgModule({

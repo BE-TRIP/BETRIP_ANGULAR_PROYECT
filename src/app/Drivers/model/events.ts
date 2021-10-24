@@ -14,4 +14,3 @@ export interface Eventos{
     driverUrl:string;
     travelerId:number
 }
-

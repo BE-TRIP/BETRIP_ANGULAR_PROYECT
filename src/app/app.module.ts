@@ -29,6 +29,7 @@ import { GoogleMapsModule } from '@angular/google-maps';
 import {MatListModule} from '@angular/material/list';
 import { FilterPipe } from './pipes/filter.pipe'
 import { MatOptionModule } from '@angular/material/core';
+import { ViewEventsComponent } from './Drivers/pages/view-events/view-events.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +42,7 @@ import { MatOptionModule } from '@angular/material/core';
     SearchRouteComponent,
     RoutesComponent,
     FilterPipe,
+    ViewEventsComponent,
   ],
   imports: [
     BrowserModule,

@@ -31,6 +31,7 @@ import { FilterPipe } from './pipes/filter.pipe'
 import { MatOptionModule } from '@angular/material/core';
 import { CreateRouteComponent } from './Drivers/pages/create-route/create-route.component';
 import { TripRoutesComponent } from './Drivers/pages/trip-routes/trip-routes.component';
+import { ShowMyRoutesComponent } from './Drivers/pages/show-my-routes/show-my-routes.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +45,8 @@ import { TripRoutesComponent } from './Drivers/pages/trip-routes/trip-routes.com
     RoutesComponent,
     FilterPipe,
     CreateRouteComponent,
-    TripRoutesComponent
+    TripRoutesComponent,
+    ShowMyRoutesComponent
   ],
   imports: [
     BrowserModule,

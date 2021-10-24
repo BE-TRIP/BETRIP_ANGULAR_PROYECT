@@ -16,7 +16,7 @@ import { ThrowStmt } from '@angular/compiler';
 export class TripRoutesComponent implements OnInit {
 
   dataSource: MatTableDataSource<any>;
-  displayedColumns: string[] = ['destiny', 'starting_point', 'departure_date', 'cost', 'seating', 'drivers'];
+  displayedColumns: string[] = ['destiny', 'starting_point', 'departure_date', 'cost', 'seating', 'drivers', 'actions'];
 
   @ViewChild( MatPaginator, { static:true })
   paginator!: MatPaginator;
@@ -40,6 +40,15 @@ export class TripRoutesComponent implements OnInit {
     this.routeService.getAll().subscribe((response: any)=> {
       this.dataSource.data = response;
     });
+  }
+
+    deleteItem(id: number){
+    this.routeService.delete(id).subscribe(()=>{
+      this.dataSource.data = this.dataSource.data.filter((o: tripRoute)=>{
+        return o.id!==id ? o: false;
+      });
+    });
+    console.log(this.dataSource.data);
   }
 
 }

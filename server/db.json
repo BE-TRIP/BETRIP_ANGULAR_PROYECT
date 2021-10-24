@@ -223,7 +223,7 @@
   "routes": [
     {
       "id": 1,
-      "driver": 1,
+      "driverId": 1,
       "destiny": "Churin",
       "seating": 3,
       "starting_point": "Ancón",
@@ -232,81 +232,11 @@
       "cost": 90
     },
     {
+      "destiny": "LIMA",
+      "starting_point": "ICA",
+      "departure_date": "21/12/21",
+      "cost": "16",
       "id": 2,
-      "driver": 2,
-      "destiny": "Lomas de Lachay",
-      "seating": 5,
-      "starting_point": "Surco",
-      "departure_time": "2:00 pm",
-      "departure_date": "28/11/2021",
-      "cost": 20
-    },
-    {
-      "id": 3,
-      "driver": 3,
-      "destiny": "Huaraz",
-      "seating": 3,
-      "starting_point": "Centro de Lima",
-      "departure_time": "6:00 pm",
-      "departure_date": "26/12/2021",
-      "cost": 50
-    },
-    {
-      "id": 4,
-      "driver": 4,
-      "destiny": "Cineguilla",
-      "seating": 4,
-      "starting_point": "La Molina",
-      "departure_time": "12:00 am",
-      "departure_date": "29/12/2021",
-      "cost": 30
-    },
-    {
-      "id": 5,
-      "driver": 5,
-      "destiny": "Nazca",
-      "seating": 3,
-      "starting_point": "Chorrillos",
-      "departure_time": "8:00 pm",
-      "departure_date": "25/12/2021",
-      "cost": 15
-    },
-    {
-      "id": 6,
-      "driver": 4,
-      "destiny": "Chiclayo",
-      "seating": 2,
-      "starting_point": "San Isidro",
-      "departure_time": "10:00 am",
-      "departure_date": "30/12/2021",
-      "cost": 100
-    },
-    {
-      "id": 7,
-      "driver": 2,
-      "destiny": "Real Felipe",
-      "seating": 1,
-      "starting_point": "San Borja",
-      "departure_time": "10:00 pm",
-      "departure_date": "24/12/2021",
-      "cost": 25
-    },
-    {
-      "id": 8,
-      "driver": 1,
-      "destiny": "Canta",
-      "seating": 4,
-      "starting_point": "Jockey Plaza",
-      "departure_time": "7:00 am",
-      "departure_date": "31/12/2021",
-      "cost": 70
-    },
-    {
-      "destiny": "Lima",
-      "starting_point": "Lima",
-      "departure_date": "12/12/21",
-      "cost": "14",
-      "id": 9,
       "seating": 2,
       "departure_time": "00:00 pm",
       "driver": "Matias Perez"

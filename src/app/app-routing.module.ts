@@ -11,6 +11,7 @@ import { SearchRouteComponent } from './Travelers_/pages/search-route/search-rou
 import { CreateEventComponent } from './Travelers_/pages/create-event/create-event.component';
 import { CreateRouteComponent } from './Drivers/pages/create-route/create-route.component';
 import { TripRoutesComponent } from './Drivers/pages/trip-routes/trip-routes.component';
+import { ShowMyRoutesComponent } from './Drivers/pages/show-my-routes/show-my-routes.component';
 const routes: Routes = [
   {path:'',redirectTo:'login',pathMatch:'full'},
   {path:'login',component:LoginComponent},
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path:'search-Routes',component:SearchRouteComponent},
   {path:'create-Event',component:CreateEventComponent},
   {path:'create-route', component:CreateRouteComponent},
-  {path:'tripRoutes', component:TripRoutesComponent} 
+  {path:'tripRoutes', component:TripRoutesComponent},
+  {path:'showMyRoutes', component:ShowMyRoutesComponent}
 ];
 
 @NgModule({

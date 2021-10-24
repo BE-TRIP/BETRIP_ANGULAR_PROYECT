@@ -72,5 +72,12 @@ delete(id: any){
     catchError(this.handleError));
 }
 
+getByDriverId(id: any): Observable<tripRoute>{
+  return this.http.get<tripRoute>(`http://localhost:3000/api/v1/drivers/${id}/routes`, this.httpOptions)
+  .pipe(
+    retry(2),
+    catchError(this.handleError));
+}
+
 
 }

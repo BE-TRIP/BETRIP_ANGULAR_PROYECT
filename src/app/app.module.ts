@@ -36,6 +36,8 @@ import { LoginDriverComponent } from './Drivers/pages/login-driver/login-driver.
 import { RegisterDriverComponent } from './Drivers/pages/register-driver/register-driver.component';
 import { RegisterVehicleComponent } from './Drivers/pages/register-vehicle/register-vehicle.component';
 import { LoginTravelerComponent } from './Travelers_/pages/login-traveler/login-traveler.component';
+import { ViewEventsComponent } from './Drivers/pages/view-events/view-events.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,7 +56,8 @@ import { LoginTravelerComponent } from './Travelers_/pages/login-traveler/login-
     LoginDriverComponent,
     RegisterDriverComponent,
     RegisterVehicleComponent,
-    LoginTravelerComponent
+    LoginTravelerComponent,
+    ViewEventsComponent
   ],
   imports: [
     BrowserModule,

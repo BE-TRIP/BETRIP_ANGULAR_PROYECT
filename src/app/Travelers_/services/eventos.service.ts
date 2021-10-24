@@ -8,9 +8,8 @@ import	{catchError,retry}from 'rxjs/operators'
 })
 export class EventosService {
 
-  //basePath='http://localhost:3000/api/v1/Eventos'
-  basePath='http://localhost:3000/Eventos'
-
+  basePath='http://localhost:3000/api/v1/Eventos'
+ 
   httpOptions={
     headers:new HttpHeaders({
       'Content-Type':'application/json'

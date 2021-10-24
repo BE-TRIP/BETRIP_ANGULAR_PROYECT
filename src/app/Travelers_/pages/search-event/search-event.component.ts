@@ -28,4 +28,5 @@ export class SearchEventComponent implements OnInit {
         });      
   }
   
+
 }

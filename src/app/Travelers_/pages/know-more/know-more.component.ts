@@ -32,7 +32,12 @@ export class KnowMoreComponent implements OnInit {
   }
   
   getByIdEvent(ide:number){
-    this.eventosService.getById(ide).subscribe((data:any)=> this.eventoData.push(data));
+    
+    this.eventosService.getById(ide).subscribe((data:any)=> 
+    {
+      this.eventoData.push(data);
+      console.log(data)
+    });
   }
 
   getevent(){

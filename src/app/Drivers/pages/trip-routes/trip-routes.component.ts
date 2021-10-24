@@ -16,7 +16,7 @@ import { ThrowStmt } from '@angular/compiler';
 export class TripRoutesComponent implements OnInit {
 
   dataSource: MatTableDataSource<any>;
-  displayedColumns: string[] = ['id','driver','destiny', 'starting_point', 'departure_date', 'cost'];
+  displayedColumns: string[] = ['destiny', 'starting_point', 'departure_date', 'cost', 'seating', 'drivers'];
 
   @ViewChild( MatPaginator, { static:true })
   paginator!: MatPaginator;

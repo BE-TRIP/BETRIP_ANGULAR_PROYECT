@@ -37,7 +37,8 @@
         "cost":90,
         "type":"Camioneta",
         "plate":"WRX80",
-        "driverUrl":"/assets/Images/conductor_1.png"
+        "driverUrl":"/assets/Images/conductor_1.png",
+        "travelerId":0
 
         },
 
@@ -53,8 +54,8 @@
         "cost": 120,
         "type": "Furgoneta",
         "plate": "XYP9X",
-        "driverUrl": "/assets/Images/conductor_2.jpg"
-
+        "driverUrl": "/assets/Images/conductor_2.jpg",
+        "travelerId":0
         
         },
         { 
@@ -69,7 +70,8 @@
         "cost": 70,
         "type": "Minivan",
         "plate": "T0D3S",
-        "driverUrl": "/assets/Images/conductor_3.jpg"
+        "driverUrl": "/assets/Images/conductor_3.jpg",
+        "travelerId":1
 
         },
         { 
@@ -84,7 +86,8 @@
         "cost": 90,
         "type": "Minivan",
         "plate": "SD20D",
-        "driverUrl": "/assets/Images/conductor_4.jpg"
+        "driverUrl": "/assets/Images/conductor_4.jpg",
+        "travelerId":0
 
         },
         { 
@@ -99,8 +102,9 @@
         "cost": 200,
         "type": "Campervam",
         "plate": "S1M0N",
-        "driverUrl": "/assets/Images/conductor_5.png"
-
+        "driverUrl": "/assets/Images/conductor_5.png",
+        "travelerId":1
+        
         }
 
 

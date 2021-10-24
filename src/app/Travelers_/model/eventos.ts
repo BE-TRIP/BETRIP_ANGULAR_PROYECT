@@ -12,5 +12,5 @@ export interface Eventos{
     type: string;
     plate: string;
     driverUrl:string;
-  
+    travelerId:0
 }

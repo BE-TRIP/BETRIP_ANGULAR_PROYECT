@@ -2,10 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.4.
 
-## Development server
+## Node Modules 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm install ` for a install the necessary componentes.
+## Google Maps Modules 
+Run `npm install @angular/google-maps ` for a install the google map component
 
+------------------------------------
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.

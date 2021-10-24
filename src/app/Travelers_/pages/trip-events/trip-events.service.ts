@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { tripEvent } from './trip-events';
+import { tripEvent } from './trip-events'; //model .ts
 import { catchError, retry } from 'rxjs/operators';
 
 

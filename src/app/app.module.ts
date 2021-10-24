@@ -29,6 +29,8 @@ import { GoogleMapsModule } from '@angular/google-maps';
 import {MatListModule} from '@angular/material/list';
 import { FilterPipe } from './pipes/filter.pipe'
 import { MatOptionModule } from '@angular/material/core';
+import { CreateRouteComponent } from './Drivers/pages/create-route/create-route.component';
+import { TripRoutesComponent } from './Drivers/pages/trip-routes/trip-routes.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +43,8 @@ import { MatOptionModule } from '@angular/material/core';
     SearchRouteComponent,
     RoutesComponent,
     FilterPipe,
+    CreateRouteComponent,
+    TripRoutesComponent
   ],
   imports: [
     BrowserModule,

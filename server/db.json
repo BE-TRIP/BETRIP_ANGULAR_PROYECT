@@ -99,6 +99,19 @@
       "type": "Campervam",
       "plate": "S1M0N",
       "driverUrl": "/assets/Images/conductor_5.png"
+    },
+    {
+      "destiny": "Pachacamac",
+      "starting_point": "Lima",
+      "departure_date": "2021-11-11",
+      "cost": "50",
+      "id": 6,
+      "seating": 2,
+      "destinyUrl": "#",
+      "departure_time": "00:00 pm",
+      "type": "Camioneta",
+      "plate": "12YPW",
+      "driver": "Matias Perez"
     }
   ],
   "drivers": [

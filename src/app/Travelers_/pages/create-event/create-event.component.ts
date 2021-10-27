@@ -56,7 +56,7 @@ export class CreateEventComponent implements OnInit {
 
   setDepartureDateValidation(){
     const nameControl=this.createTripEventForm.get('departure_date');
-    nameControl?.setValidators([Validators.required, Validators.maxLength(8)])
+    nameControl?.setValidators([Validators.required])
   }
 
   setCostValidation(){

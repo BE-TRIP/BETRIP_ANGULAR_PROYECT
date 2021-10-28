@@ -17,6 +17,13 @@ import {RegisterDriverComponent} from './Drivers/pages/register-driver/register-
 import {RegisterVehicleComponent} from './Drivers/pages/register-vehicle/register-vehicle.component'
 import { LoginTravelerComponent } from './Travelers_/pages/login-traveler/login-traveler.component';
 import { ViewEventsComponent } from './Drivers/pages/view-events/view-events.component';
+import { TravelerProfileComponent } from './Travelers_/pages/traveler-profile/traveler-profile.component';
+
+
+
+
+
+
 const routes: Routes = [
   {path:'',redirectTo:'login',pathMatch:'full'},
   {path:'login',component:LoginComponent},
@@ -35,7 +42,8 @@ const routes: Routes = [
   {path:'register-vehicle',component:RegisterVehicleComponent},
   {path:'login-traveler',component:LoginTravelerComponent},
   {path:'register-traveler',component:RegisterTravelerComponent},
-  {path:'view-event-driver',component:ViewEventsComponent}
+  {path:'view-event-driver',component:ViewEventsComponent},
+  {path:'traveler-profile',component:TravelerProfileComponent}
 ];
 
 @NgModule({

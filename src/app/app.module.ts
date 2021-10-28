@@ -37,6 +37,7 @@ import { RegisterDriverComponent } from './Drivers/pages/register-driver/registe
 import { RegisterVehicleComponent } from './Drivers/pages/register-vehicle/register-vehicle.component';
 import { LoginTravelerComponent } from './Travelers_/pages/login-traveler/login-traveler.component';
 import { ViewEventsComponent } from './Drivers/pages/view-events/view-events.component';
+import { TravelerProfileComponent } from './Travelers_/pages/traveler-profile/traveler-profile.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { ViewEventsComponent } from './Drivers/pages/view-events/view-events.com
     RegisterDriverComponent,
     RegisterVehicleComponent,
     LoginTravelerComponent,
-    ViewEventsComponent
+    ViewEventsComponent,
+    TravelerProfileComponent
   ],
   imports: [
     BrowserModule,

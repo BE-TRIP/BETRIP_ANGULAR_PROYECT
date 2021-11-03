@@ -18,7 +18,7 @@ registerForm: FormGroup=this.formBuilder.group({
   dni:['',{validators:[Validators.required],updateOn:'change'}],
   district:['',{validators:[Validators.required],updateOn:'change'}],
   email:['',{validators:[Validators.required,Validators.email],updateOn:'change'}],
-  password:['',{validators:[Validators.required],updateOn:'change'}],
+  password:['',{validators:[Validators.required,Validators.minLength(8)],updateOn:'change'}],
 });
 
   constructor(private formBuilder:FormBuilder,private driverService:DriversServices) { 
@@ -32,8 +32,7 @@ registerForm: FormGroup=this.formBuilder.group({
     this.setDNIValidation();
     this.setLastNameValidation(); 
     this.setDistrictValidation();
-    this.setEmailValidation();
-    this.setPasswordValidation(); 
+
  
   }
 
@@ -66,11 +65,7 @@ registerForm: FormGroup=this.formBuilder.group({
  setDistrictValidation(){const nameControl=this.registerForm.get('district');
  nameControl?.setValidators([Validators.pattern('[a-zA-Z ]*$'),Validators.required])};
 
- setEmailValidation(){const nameControl=this.registerForm.get('email');
- nameControl?.setValidators([Validators.pattern('[a-zA-Z ]*$'),Validators.required])};
 
- setPasswordValidation(){const nameControl=this.registerForm.get('password');
- nameControl?.setValidators([Validators.pattern('[a-zA-Z ]*$'),Validators.required])}; 
 
 
 

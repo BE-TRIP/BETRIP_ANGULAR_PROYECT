@@ -27,11 +27,7 @@ export class RegisterVehicleComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.setTipeValidation(); 
-    this.setModelValidation();
-    this.setBrandValidation();
-    this.setLicencePlateValidation();
-    this.setLicenceCodeValidation();
+ 
     this.setNumberSeatsValidation();
 
   }
@@ -43,29 +39,6 @@ export class RegisterVehicleComponent implements OnInit {
   get licence_plate(){return this.registerForm.get('licencce_plate');}
   get number_seats(){return this.registerForm.get('number_seats');}
 
-  setTipeValidation(){
-    const nameControl=this.registerForm.get('tipe');
-    nameControl?.setValidators([Validators.pattern('[a-zA-Z ]*$'),Validators.required])
-  }; 
-
-  setModelValidation(){
-    const nameControl=this.registerForm.get('model');
-    nameControl?.setValidators([Validators.pattern('[a-zA-Z ]*$'),Validators.required])
-  };
-
-  setBrandValidation(){
-    const nameControl=this.registerForm.get('brand');
-    nameControl?.setValidators([Validators.pattern('[a-zA-Z ]*$'),Validators.required])
-  };
-
-  setLicencePlateValidation(){
-    const nameControl=this.registerForm.get('licence_plate');
-    nameControl?.setValidators([Validators.pattern('[a-zA-Z ]*$'),Validators.required])
-  };
-  setLicenceCodeValidation(){
-    const nameControl=this.registerForm.get('licence_code');
-    nameControl?.setValidators([Validators.pattern('[a-zA-Z ]*$'),Validators.required])
-  };
 
   setNumberSeatsValidation(){
     const nameControl=this.registerForm.get('number_seats');

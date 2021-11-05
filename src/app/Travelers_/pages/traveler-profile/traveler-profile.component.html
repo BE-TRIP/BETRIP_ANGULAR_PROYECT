@@ -1,1 +1,46 @@
-<p>traveler-profile works!</p>
+<mat-toolbar class="scrollbar">
+    <img src="/assets/Images/imageLogo.jpg">
+    <div></div>
+    <div class="mat-spacer"></div>
+    <div></div>
+    <ul>
+      <li><a mat-button [routerLink]="'/searchEvent'" >Inicio</a></li>
+      <li><a mat-button [routerLink]="'/routes'" >Buscar Transporte</a></li>
+      <li><a mat-button [routerLink]="'/routes'">Publicar</a></li>
+      <li><a mat-button [routerLink]="'/traveler-profile'">Perfil</a></li>
+  </ul>
+  </mat-toolbar>
+  
+
+
+<div class="container mt-5">
+    <h2>MI PERFIL </h2>
+
+    <div class="datos-perfil">
+      <div class="row">
+        <div class="col-4">
+          <img src="{{pfp}}" alt="">
+          <span class="name">{{name}}</span>
+        </div>
+        <div class="col-6">
+          <div class="data">
+            <label>EDAD:</label><br>
+            <span>{{age}}</span>
+          </div>
+          <div class="data">
+            <label>DNI:</label><br>
+            <span>{{dni}}</span>
+          </div>
+          <div class="data">
+            <label>EMAIL:</label><br>
+            <span>{{email}}</span>
+          </div>
+          <div class="data">
+            <label>NUMERO CELULAR:</label><br>
+            <span>{{phoneNumber}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</div>

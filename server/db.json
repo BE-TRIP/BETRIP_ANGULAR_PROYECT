@@ -7,7 +7,8 @@
       "dni": 0,
       "email": "string",
       "password": "string",
-      "phoneNumber": "string"
+      "phoneNumber": "string",
+      "pfp": "https://image.freepik.com/foto-gratis/primer-plano-hombre-caucasico-impresionado-diciendo-wow-mirando-izquierda-asombrado-revisando-trato-promocion-fondo-blanco-copia-espacio_1258-77230.jpg"
     },
     {
       "name": "GAEE",
@@ -16,7 +17,8 @@
       "email": "qwoidqoh@as",
       "password": "121212112",
       "phoneNumber": "0991144192",
-      "id": 1
+      "id": 1,
+      "pfp": "https://image.freepik.com/foto-gratis/primer-plano-hombre-caucasico-impresionado-diciendo-wow-mirando-izquierda-asombrado-revisando-trato-promocion-fondo-blanco-copia-espacio_1258-77230.jpg"
     },
     {
       "name": "adads",
@@ -27,6 +29,15 @@
       "phoneNumber": "1321321",
       "id": 2,
       "apiId": "v1"
+    },
+    {
+      "name": "Diego",
+      "age": 19,
+      "dni": "75559243",
+      "email": "dosoriohorna@gmail.com",
+      "password": "diegoosorio",
+      "phoneNumber": "964570588",
+      "id": 3
     }
   ],
   "Eventos": [

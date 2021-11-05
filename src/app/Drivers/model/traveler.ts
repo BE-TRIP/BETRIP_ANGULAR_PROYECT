@@ -6,4 +6,5 @@ export interface Traveler{
     email:string;
     password:string;
     phoneNumber:string;
+    pfp:string;
 }

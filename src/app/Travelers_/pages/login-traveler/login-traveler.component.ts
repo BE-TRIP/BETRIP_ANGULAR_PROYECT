@@ -12,7 +12,7 @@ export class LoginTravelerComponent implements OnInit {
   submitted:boolean=false;
   registerForm: FormGroup=this.formBuilder.group({
     email:['',{validators:[Validators.required,Validators.email],updateOn:'change'}],
-    password:['',{validators:[Validators.required,Validators.minLength(8)],updateOn:'change'}],
+    password:['',{validators:[Validators.required,Validators.minLength(6)],updateOn:'change'}],
   });
   constructor(private formBuilder:FormBuilder,private travelerService:TravelersService) { 
   this.travelerData={}as Traveler;}

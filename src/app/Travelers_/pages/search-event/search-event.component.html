@@ -1,22 +1,15 @@
 <mat-toolbar class="scrollbar">
-    <img src="/assets/Images/imageLogo.jpg">
-    <div></div>
-    <div class="mat-spacer"></div>
-    <div></div>
-    <ul>
-      <li><a mat-button >Inicio</a></li>
-      <li><a mat-button [routerLink]="'/routes'" >Buscar Transporte</a></li>
-      <li><a mat-button [routerLink]="'/create-Event'" >Publicar</a></li>
-  </ul>
-  </mat-toolbar>
-  
-  <div class= "search">
-  <mat-form-field class="example-full-width">
-    <span matPrefix> </span>
-    <input type="tel" matInput placeholder="Search" name= "search">
-    <button matSuffix mat-button><mat-icon >search</mat-icon></button>
-    </mat-form-field>
-  </div>
+  <img src="/assets/Images/imageLogo.jpg">
+  <div></div>
+  <div class="mat-spacer"></div>
+  <div></div>
+  <ul>
+    <li><a mat-button [routerLink]="'/searchEvent'" >Inicio</a></li>
+    <li><a mat-button [routerLink]="'/routes'" >Buscar Transporte</a></li>
+    <li><a mat-button [routerLink]="'/routes'">Publicar</a></li>
+    <li><a mat-button [routerLink]="'/traveler-profile'">Perfil</a></li>
+</ul>
+</mat-toolbar>
   
   
   

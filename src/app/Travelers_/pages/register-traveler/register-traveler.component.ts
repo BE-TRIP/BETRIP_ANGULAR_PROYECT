@@ -15,7 +15,7 @@ export class RegisterTravelerComponent implements OnInit {
     age:['',{validators:[Validators.required],updateOn:'change'}],
     dni:['',{validators:[Validators.required],updateOn:'change'}],
     email:['',{validators:[Validators.required,Validators.email],updateOn:'change'}],
-    password:['',{validators:[Validators.required,Validators.minLength(8)],updateOn:'change'}],
+    password:['',{validators:[Validators.required,Validators.minLength(6)],updateOn:'change'}],
     phone:['',{update:"change"}],
     
   });

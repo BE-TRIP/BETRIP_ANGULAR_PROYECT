@@ -1,15 +1,19 @@
-<mat-toolbar class="scrollbar">
-    <img src="/assets/Images/imageLogo.jpg">
-    <div></div>
-    <div class="mat-spacer"></div>
-    <div></div>
-    <ul>
-      <li> <a mat-button [routerLink]="'/tripEvent'">Eventos de Viaje</a></li>
-      <li><a mat-button [routerLink]="'/routes'">Rutas</a></li>
-  </ul>
+<mat-toolbar class="printoolbar">
+
+    <div class="container">
+      <mat-toolbar-row>
+        <img src="/assets/Images/imageLogo.jpg">
+        <span class="spacer"></span>
+        
+        <a mat-button [routerLink]="'/tripEvent'">Eventos de Viaje</a>
+        <a mat-button [routerLink]="'/routes'">Rutas</a>
+      
+      </mat-toolbar-row>
+    </div>
   </mat-toolbar>
 
-<div class="container search-routes">
+
+<div class="container search-routes mt-5">
     <h1>Search Routes</h1>
     <div class="row">
         <div class="col">

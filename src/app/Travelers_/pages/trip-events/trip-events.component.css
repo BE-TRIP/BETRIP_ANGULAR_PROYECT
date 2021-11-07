@@ -1,12 +1,10 @@
+
+
 .spacer {
     flex: 1 1 auto;
 }
 
-.container {
-    margin-top: 25px;
-    margin-left: 50px;
-    margin-right: 50px;
-}
+
 
 .table-wrapper{
     width: 1024px;

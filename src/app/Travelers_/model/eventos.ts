@@ -1,7 +1,7 @@
 export interface Eventos{
 
     id:number;
-    driver: string; 
+    driverid: number; 
     destiny: string;
     destinyUrl:string
     seating: Number,
@@ -12,6 +12,6 @@ export interface Eventos{
     type: string;
     plate: string;
     driverUrl:string;
-    travelerId:0
+    travelerProfilePhotofUrl: string
 }
 

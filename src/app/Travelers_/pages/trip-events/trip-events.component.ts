@@ -40,6 +40,8 @@ export class TripEventsComponent implements OnInit, AfterViewInit  {
   getAllEvent(){
     this.eventService.getAll().subscribe((response: any)=> {
       this.dataSource.data = response;
+      console.log(response.data.content)
+
     });
   }
 

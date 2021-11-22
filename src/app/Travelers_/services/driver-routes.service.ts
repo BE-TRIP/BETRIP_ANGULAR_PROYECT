@@ -1,16 +1,15 @@
 import { Injectable } from '@angular/core';
 import{HttpClient,HttpErrorResponse,HttpHeaders} from '@angular/common/http'
 import { Observable,throwError } from 'rxjs';
-import { Eventos } from '../model/eventos';
+import { driverRoute } from '../model/driverRoutes';
 import	{catchError,retry}from 'rxjs/operators'
 @Injectable({
   providedIn: 'root'
 })
-export class EventosService {
+export class DriverRoutesService {
 
   //basePath='http://localhost:3000/api/v1/Eventos'
-  basePath='https://be-trip-back322.herokuapp.com/api/v1/travel-events?page=0&size=1&sort=string'
-  basePathito='https://be-trip-back322.herokuapp.com/api/v1/travel-events'
+  basePath='https://be-trip-back322.herokuapp.com/api/v1/driver-routes?page=0&size=1&sort=string'
   
   httpOptions={
     
@@ -40,8 +39,8 @@ export class EventosService {
   }
 
 
-  create(item:any):Observable<Eventos>{
-    return this.http.post<Eventos>(this.basePath,JSON.stringify(item),this.httpOptions)
+  create(item:any):Observable<driverRoute>{
+    return this.http.post<driverRoute>(this.basePath,JSON.stringify(item),this.httpOptions)
     .pipe(
       retry(2),
       catchError(this.handleError)
@@ -50,7 +49,7 @@ export class EventosService {
   
 
   getById(id:any){
-      return this.http.get<Eventos>(`${this.basePathito}/${id}`,this.httpOptions).pipe(
+      return this.http.get<driverRoute>(`${this.basePath}/${id}`,this.httpOptions).pipe(
       retry(2),
       catchError(this.handleError)
       );
@@ -58,13 +57,13 @@ export class EventosService {
       
   }
   getAll(){
-    return this.http.get<Eventos>(this.basePath,this.httpOptions).pipe(
+    return this.http.get<driverRoute>(this.basePath,this.httpOptions).pipe(
       retry(2),
       catchError(this.handleError)
       );
   }
-  update(id:any,item:any):Observable<Eventos>{
-    return this.http.put<Eventos>(`${this.basePath}/${id}`,JSON.stringify(item),this.httpOptions)
+  update(id:any,item:any){
+    return this.http.put<driverRoute>(`${this.basePath}/${id}`,JSON.stringify(item),this.httpOptions)
     .pipe(
       retry(2),
       catchError(this.handleError)
@@ -72,7 +71,7 @@ export class EventosService {
   }
 
   delete(id:any){
-    return this.http.put<Eventos>(`${this.basePath}/${id}`,this.httpOptions)
+    return this.http.put<driverRoute>(`${this.basePath}/${id}`,this.httpOptions)
     .pipe(
       retry(2),
       catchError(this.handleError)

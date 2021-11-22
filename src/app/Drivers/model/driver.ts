@@ -6,12 +6,12 @@ export interface Driver{
     last_name:string;
     age:number,
     dni:number;
-    Pfp:string;
+    pfp:string;
     email:string;
     password:string;
     number_seats:number;
     licence_plate:string;
-    tipe:string;
+    type:string;
     model:string;
     district:string;
     brand:string;

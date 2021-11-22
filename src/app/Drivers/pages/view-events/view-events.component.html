@@ -22,11 +22,11 @@
   <div class="div-tripEvent1">
     <div class="div-tripEvent2">
         
-            <div *ngFor="let element of eventoData;let i=index" class="cardevents">
+            <div *ngFor="let element of eventoData.content;let i=index" class="cardevents">
              
             <mat-card class="example-card" >
                 <mat-card-header>
-                  <img mat-card-avatar src="{{element.driverUrl}}" class="example-header-image">
+                  <img mat-card-avatar src="{{element.travelerProfilePhotofUrl}}" class="example-header-image">
               
                   <div mat-card-avatar class="example-header-image"></div>
                   <mat-card-title>{{element.destiny}}</mat-card-title>
@@ -47,7 +47,7 @@
                         <button  mat-raised-button color="accent" (click)="postulate(element.id,element)">Postular</button>
                       </td>
                       <td>
-                        <button mat-raised-button color="primary" [routerLink]="'/knowMore'">Mas información</button>
+                        <button mat-raised-button color="primary" [routerLink]="['/knowMore',element.id]">Mas información</button>
                       </td>
                     </tr>
                   </table>

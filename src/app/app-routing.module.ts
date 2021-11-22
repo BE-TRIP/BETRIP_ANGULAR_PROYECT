@@ -30,7 +30,12 @@ const routes: Routes = [
   {path:'travelerRegister',component:RegisterTravelerComponent},
   {path:'tripEvent',component:TripEventsComponent},
   {path:'routes',component:RoutesComponent},
-  {path:'knowMore',component:KnowMoreComponent},
+
+  {path:'knowMore/:id',component:KnowMoreComponent},
+
+
+
+
   {path:'searchEvent',component:SearchEventComponent},
   {path:'search-Routes',component:SearchRouteComponent},
   {path:'create-Event',component:CreateEventComponent},

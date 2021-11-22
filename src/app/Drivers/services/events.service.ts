@@ -7,8 +7,9 @@ import	{catchError,retry}from 'rxjs/operators';
   providedIn: 'root'
 })
 export class EventsService {
-  basePath='http://localhost:3000/api/v1/Eventos'
- 
+  //basePath='http://localhost:3000/api/v1/Eventos'
+  basePath='https://be-trip-back322.herokuapp.com/api/v1/travel-events?page=0&size=1&sort=string'
+
   httpOptions={
     headers:new HttpHeaders({
       'Content-Type':'application/json'
@@ -28,7 +29,7 @@ export class EventsService {
   }
 
 
-  create(item:any):Observable<Eventos>{
+  create(item:any){
     return this.http.post<Eventos>(this.basePath,JSON.stringify(item),this.httpOptions)
     .pipe(
       retry(2),
@@ -37,19 +38,19 @@ export class EventsService {
   }
   
 
-  getById(id:any):Observable<Eventos>{
+  getById(id:any){
     return this.http.get<Eventos>(`${this.basePath}/${id}`,this.httpOptions).pipe(
       retry(2),
       catchError(this.handleError)
       );
   }
-  getAll():Observable<Eventos>{
+  getAll(){
     return this.http.get<Eventos>(this.basePath,this.httpOptions).pipe(
       retry(2),
       catchError(this.handleError)
       );
   }
-  update(id:any,item:any):Observable<Eventos>{
+  update(id:any,item:any){
     return this.http.put<Eventos>(`${this.basePath}/${id}`,JSON.stringify(item),this.httpOptions)
     .pipe(
       retry(2),

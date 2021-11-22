@@ -19,11 +19,11 @@
   <div class="div-tripEvent1">
     <div class="div-tripEvent2">
         
-            <div *ngFor="let element of eventoData" class="cardevents">
+            <div *ngFor="let element of eventoData.content" class="cardevents">
              
             <mat-card class="example-card" >
                 <mat-card-header>
-                  <img mat-card-avatar src="{{element.driverUrl}}" class="example-header-image">
+                  <img mat-card-avatar src="{{element.travelerProfilePhotofUrl}}" class="example-header-image">
               
                   <div mat-card-avatar class="example-header-image"></div>
                   <mat-card-title>{{element.destiny}}</mat-card-title>
@@ -36,7 +36,7 @@
               
                
                 <mat-card-actions>
-                  <button mat-button [routerLink]="'/knowMore'">Mas información</button>
+                  <button mat-button [routerLink]="['/knowMore',element.id]">Mas información</button>
                 </mat-card-actions>
             </mat-card>
         

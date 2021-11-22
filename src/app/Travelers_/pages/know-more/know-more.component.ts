@@ -4,31 +4,34 @@ import { EventosService } from '../../services/eventos.service';
 import { Eventos } from '../../model/eventos';
 
 
+import { ActivatedRoute } from '@angular/router';
+
 @Component({
   selector: 'app-know-more',
   templateUrl: './know-more.component.html',
   styleUrls: ['./know-more.component.css']
+
+
 })
 export class KnowMoreComponent implements OnInit {
   eventoData:Array<Eventos>=[];
   eventotoData:Array<string>=[];
 
-  pruebita:Array<string>=[
- 'tuki','owo','hshdshd'
-
-  ]
 
 
   submitted:boolean=false;
 
 
-  constructor(private eventosService:EventosService) {
-   
+  constructor(private eventosService:EventosService,private ruta:ActivatedRoute) {
+   this.ruta.params.subscribe(params=>{
+        console.log(params['id']);
+        this. getByIdEvent(params['id']);
+   });
    }
   ngOnInit(): void {
-    this. getByIdEvent(4);
+    //this. getByIdEvent(4);
     console.log(this.eventoData);
-    console.log(this.pruebita);
+    //console.log(this.pruebita);
   }
   
   getByIdEvent(ide:number){
@@ -41,13 +44,11 @@ export class KnowMoreComponent implements OnInit {
   }
 
   getevent(){
-
-
 // this.eventoData.push()
     this.eventosService.getAll().subscribe((data:any)=> this.eventoData.push(data));
     //this.eventosService.getAll().subscribe((response:any)=>{ this.eventoData.data.push({...response});}
    // this.eventosService.getAll().subscribe((data:any)=> this.eventoData.push(data));
-   
+  
   }
 
   saidSomething(){

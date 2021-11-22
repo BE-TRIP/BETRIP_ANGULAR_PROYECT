@@ -31,7 +31,7 @@ export class ViewEventsComponent implements OnInit {
   getEvents(){
         this.eventosService.getAll().subscribe(data => {
           this.eventoData = data;
-          console.log(this.eventoData);
+          console.log(this.eventoData.content);
         });      
   };
   getTravelers(){

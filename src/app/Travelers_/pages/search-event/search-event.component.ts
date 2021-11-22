@@ -11,8 +11,8 @@ export class SearchEventComponent implements OnInit {
 
   pruebita:Array<string>=['tuki','owo','hshdshd'];
 
+  guardado:any; 
   constructor(private eventosService:EventosService) { }
-
 
   eventoData:any;
   ngOnInit(): void {
@@ -22,10 +22,16 @@ export class SearchEventComponent implements OnInit {
   }
  
   getEvents(){
+      // aca comprobamos que el usuario está guardado en el local storage
+        this.guardado= localStorage.getItem('user');
+        console.log(this.guardado)
+
         this.eventosService.getAll().subscribe(data => {
           this.eventoData = data;
-          console.log(this.eventoData)
-        });      
+          console.log(this.eventoData.content)
+        });   
+        
+        
   }
   
 

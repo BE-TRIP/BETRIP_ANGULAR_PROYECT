@@ -16,7 +16,7 @@
                         <tr>
                             <mat-form-field appereance="fill" class="full-width" >
                                           
-                                <input  type="text" matInput formControlName="tipe" placeholder="Tipe" [(ngModel)]="driverData.tipe" required >
+                                <input  type="text" matInput formControlName="tipe" placeholder="Tipe" [(ngModel)]="driverData.type" required >
                                 <mat-error *ngIf="tipe?.errors?.required">
                                     the type of vehicle is <strong>required</strong>
                                 </mat-error>

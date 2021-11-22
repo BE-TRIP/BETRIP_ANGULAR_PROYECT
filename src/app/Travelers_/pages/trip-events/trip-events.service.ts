@@ -11,11 +11,21 @@ import { catchError, retry } from 'rxjs/operators';
 export class TripEventsService {
 
   //Events Endpoint
-  basePath ='http://localhost:3000/api/v1/Eventos'
+  //basePath ='http://localhost:3000/api/v1/Eventos'
+  basePath='https://be-trip-back322.herokuapp.com/api/v1/travel-events?page=0&size=1&sort=string'
+  
   httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type': 'application/json',
+    
+    headers:new HttpHeaders({
+      'Content-Type':'application/json',
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Headers': 'Content-Type',
+      'Access-Control-Allow-Methods': 'GET,POST,OPTIONS,DELETE,PUT',
     })
+
+
+
+
   }
 
   constructor(private http: HttpClient) { }
@@ -34,7 +44,7 @@ export class TripEventsService {
   }
 
   //Create Event
-  create(item: any): Observable<tripEvent>{
+  create(item: any){
     return this.http.post<tripEvent>(this.basePath, JSON.stringify(item), this.httpOptions)
     .pipe(
       retry(2),
@@ -42,7 +52,7 @@ export class TripEventsService {
   }
 
   //Get event by id
-  getById(id: any): Observable<tripEvent>{
+  getById(id: any){
     return this.http.get<tripEvent>(`${this.basePath}/${id}`, this.httpOptions)
     .pipe(
       retry(2),
@@ -50,7 +60,7 @@ export class TripEventsService {
   }
 
   //Get All
-  getAll(): Observable<tripEvent>{
+  getAll(){
     return this.http.get<tripEvent>(this.basePath, this.httpOptions)
     .pipe(
       retry(2),
@@ -58,7 +68,7 @@ export class TripEventsService {
   }
 
   //Update
-  update(id: any, item: any): Observable<tripEvent>{
+  update(id: any, item: any){
     return this.http.put<tripEvent>(`${this.basePath}/${id}`, JSON.stringify(item), this.httpOptions)
     .pipe(
       retry(2),
